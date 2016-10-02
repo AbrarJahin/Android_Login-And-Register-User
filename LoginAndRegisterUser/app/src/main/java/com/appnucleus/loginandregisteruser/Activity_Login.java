@@ -1,15 +1,5 @@
 package com.appnucleus.loginandregisteruser;
 
-import volley.AppController;
-import volley.Config_URL;
-import helper.SessionManager;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -24,6 +14,16 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import helper.SessionManager;
+import volley.AppController;
+import volley.Config_URL;
 
 public class Activity_Login extends Activity
 {
@@ -90,6 +90,7 @@ public class Activity_Login extends Activity
                         Activity_Register.class);
                 startActivity(i);
                 finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
 
